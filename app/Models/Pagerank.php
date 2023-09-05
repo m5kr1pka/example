@@ -16,8 +16,8 @@ class Pagerank extends Model
      */
     protected $fillable = [
         'rank',
-        'rootDomain',
-        'linkingRootDomains',
-        'domainAuthority',
+        'domain',
+        'page_rank_integer',
+        'page_rank_decimal',
     ];
 }

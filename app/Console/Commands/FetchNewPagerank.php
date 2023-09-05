@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use App\Jobs\FetchRank;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Log;
 
 class FetchNewPagerank extends Command
 {
@@ -13,7 +12,7 @@ class FetchNewPagerank extends Command
      *
      * @var string
      */
-    protected $signature = 'app:fetch-new-pagerank';
+    protected $signature = 'app:fetch-rank';
 
     /**
      * The console command description.
@@ -29,7 +28,6 @@ class FetchNewPagerank extends Command
     {
         FetchRank::dispatch();
 
-        Log::channel('stderr')->info('Something happened!');
         return Command::SUCCESS;
     }
 }

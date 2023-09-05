@@ -16,7 +16,8 @@ class SitesSeeder extends Seeder
 
         foreach ($sites as $page) {
             $site = new \App\Models\Pagerank();
-            $site->fill($page);
+            $site->rank = $page["rank"];
+            $site->domain = $page["rootDomain"];
             $site->save();
         }
     }
@@ -26,7 +27,7 @@ class SitesSeeder extends Seeder
         return [
             [
                 "rank" => 1,
-                "rootDomain" => "www.google.com",
+                "rootDomain" => "google.com",
                 "linkingRootDomains" => 100,
                 "domainAuthority" => 0
             ],
@@ -38,7 +39,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 3,
-                "rootDomain" => "www.blogger.com",
+                "rootDomain" => "blogger.com",
                 "linkingRootDomains" => 100,
                 "domainAuthority" => 0
             ],
@@ -326,7 +327,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 51,
-                "rootDomain" => "www.yahoo.com",
+                "rootDomain" => "yahoo.com",
                 "linkingRootDomains" => 95,
                 "domainAuthority" => 0
             ],
@@ -464,7 +465,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 74,
-                "rootDomain" => "www.weebly.com",
+                "rootDomain" => "weebly.com",
                 "linkingRootDomains" => 95,
                 "domainAuthority" => 0
             ],
@@ -638,7 +639,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 103,
-                "rootDomain" => "www.gov.br",
+                "rootDomain" => "gov.br",
                 "linkingRootDomains" => 94,
                 "domainAuthority" => 0
             ],
@@ -752,7 +753,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 122,
-                "rootDomain" => "www.gov.uk",
+                "rootDomain" => "gov.uk",
                 "linkingRootDomains" => 94,
                 "domainAuthority" => 0
             ],
@@ -1262,7 +1263,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 207,
-                "rootDomain" => "www.over-blog.com",
+                "rootDomain" => "over-blog.com",
                 "linkingRootDomains" => 93,
                 "domainAuthority" => 0
             ],
@@ -1292,7 +1293,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 212,
-                "rootDomain" => "www.wikipedia.org",
+                "rootDomain" => "wikipedia.org",
                 "linkingRootDomains" => 93,
                 "domainAuthority" => 0
             ],
@@ -2090,7 +2091,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 345,
-                "rootDomain" => "www.wix.com",
+                "rootDomain" => "wix.com",
                 "linkingRootDomains" => 93,
                 "domainAuthority" => 0
             ],
@@ -2108,7 +2109,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 348,
-                "rootDomain" => "www.canalblog.com",
+                "rootDomain" => "canalblog.com",
                 "linkingRootDomains" => 93,
                 "domainAuthority" => 0
             ],
@@ -2252,7 +2253,7 @@ class SitesSeeder extends Seeder
             ],
             [
                 "rank" => 372,
-                "rootDomain" => "www.livejournal.com",
+                "rootDomain" => "livejournal.com",
                 "linkingRootDomains" => 93,
                 "domainAuthority" => 0
             ],

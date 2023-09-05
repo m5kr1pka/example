@@ -21,7 +21,7 @@
       <tbody class="bg-white dark:bg-slate-800">
         <tr v-for="(p, index) in paginatedPosts">
           <td class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">
-            {{ p.rootDomain }}
+            {{ p.domain }}
           </td>
           <td
             class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400 text-center">
@@ -107,8 +107,8 @@ export default {
 
       const sites = this.posts.filter((item) => {
         return searchInput.every((v) => {
-          if (item.rootDomain) {
-            return item.rootDomain.toLowerCase().includes(v);
+          if (item.domain) {
+            return item.domain.toLowerCase().includes(v);
           }
 
         })

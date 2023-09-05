@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('pageranks', function (Blueprint $table) {
             $table->id();
-            $table->string('rank');
-            $table->string('rootDomain');
-            $table->string('linkingRootDomains');
-            $table->string('domainAuthority');
+            $table->string('domain');
+            $table->string('rank')->nullable();
+            $table->string('page_rank_integer')->nullable();
+            $table->string('page_rank_decimal')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
