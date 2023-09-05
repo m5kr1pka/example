@@ -37,7 +37,7 @@ class FetchRank implements ShouldQueue, ShouldBeUnique
         ));
 
         $response = Http::withHeaders([
-            "API-OPR" => "ws48csg0cow0w4kg0gck4oc8wo80kcg8w0g4s08k"
+            "API-OPR" => env("OPEN_PAGE_RANK_KEY")
         ])->get($url, $query);
 
         dd($response->body());

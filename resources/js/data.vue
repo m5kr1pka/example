@@ -66,7 +66,7 @@ export default {
     return {
       posts: [''],
       page: 1,
-      perPage: 80,
+      perPage: 10,
       // pages: [],
       filter: {
         search: ""
